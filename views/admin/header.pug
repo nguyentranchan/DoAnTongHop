@@ -1,0 +1,234 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  // Tell the browser to be responsive to screen width
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  // Favicon icon
+  link(rel='icon', type='image/png', sizes='16x16', href='assets/images/favicon.png')
+  title Adminmart Template - The Ultimate Multipurpose admin template
+  // Custom CSS
+  link(href='/admin/assets/extra-libs/c3/c3.min.css', rel='stylesheet')
+  link(href='/admin/assets/libs/chartist/dist/chartist.min.css', rel='stylesheet')
+  link(href='/admin/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css', rel='stylesheet')
+  // Custom CSS
+  link(href='/admin/dist/css/style.min.css', rel='stylesheet')
+  // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file://
+  //if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+// ==============================================================
+// Preloader - style you can find in spinners.css
+// ==============================================================
+.preloader
+  .lds-ripple
+    .lds-pos
+    .lds-pos
+// ==============================================================
+// Main wrapper - style you can find in pages.scss
+// ==============================================================
+#main-wrapper(data-theme='light', data-layout='vertical', data-navbarbg='skin6', data-sidebartype='full', data-sidebar-position='fixed', data-header-position='fixed', data-boxed-layout='full')
+  // ==============================================================
+  // Topbar header - style you can find in pages.scss
+  // ==============================================================
+  header.topbar(data-navbarbg='skin6')
+    nav.navbar.top-navbar.navbar-expand-md
+      .navbar-header(data-logobg='skin6')
+        // This is for the sidebar toggle which is visible on mobile only
+        a.nav-toggler.waves-effect.waves-light.d-block.d-md-none(href='javascript:void(0)')
+          i.ti-menu.ti-close
+        // ==============================================================
+        // Logo
+        // ==============================================================
+        .navbar-brand
+          // Logo icon
+          a(href='/admin')
+            b.logo-icon
+              // Dark Logo icon
+              img.dark-logo(src='/admin/assets/images/logo-icon.png', alt='homepage')
+              // Light Logo icon
+              img.light-logo(src='/admin/assets/images/logo-icon.png', alt='homepage')
+            // End Logo icon
+            // Logo text
+            span.logo-text
+              // dark Logo text
+              img.dark-logo(src='/admin/assets/images/logo-text.png', alt='homepage')
+              // Light Logo text
+              img.light-logo(src='/admin/assets/images/logo-light-text.png', alt='homepage')
+        // ==============================================================
+        // End Logo
+        // ==============================================================
+        // ==============================================================
+        // Toggle which is visible on mobile only
+        // ==============================================================
+        a.topbartoggler.d-block.d-md-none.waves-effect.waves-light(href='javascript:void(0)', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          i.ti-more
+      // ==============================================================
+      // End Logo
+      // ==============================================================
+      #navbarSupportedContent.navbar-collapse.collapse
+        // ==============================================================
+        // toggle and nav items
+        // ==============================================================
+        ul.navbar-nav.float-left.mr-auto.ml-3.pl-1
+          // Notification
+          li.nav-item.dropdown
+            a#bell.nav-link.dropdown-toggle.pl-md-3.position-relative(href='javascript:void(0)', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              span
+                i.svg-icon(data-feather='bell')
+              span.badge.badge-primary.notify-no.rounded-circle 1
+            .dropdown-menu.dropdown-menu-left.mailbox.animated.bounceInDown
+              ul.list-style-none
+                li
+                  .message-center.notifications.position-relative
+                    // Message
+                    a.message-item.d-flex.align-items-center.border-bottom.px-3.py-2(href='javascript:void(0)')
+                      .btn.btn-danger.rounded-circle.btn-circle
+                        i.text-white(data-feather='airplay')
+                      .w-75.d-inline-block.v-middle.pl-2
+                        h6.message-title.mb-0.mt-1 Luanch Admin
+                        span.font-12.text-nowrap.d-block.text-muted
+                          | Just see
+                          | the my new
+                          | admin!
+                        span.font-12.text-nowrap.d-block.text-muted 9:30 AM
+                li
+                  a.nav-link.pt-3.text-center.text-dark(href='javascript:void(0);')
+                    strong Check all notifications
+                    i.fa.fa-angle-right
+          // End Notification
+          // ==============================================================
+          // create new
+          // ==============================================================
+        // ==============================================================
+        // Right side toggle and nav items
+        // ==============================================================
+        ul.navbar-nav.float-right
+          // ==============================================================
+          // Search
+          // ==============================================================
+          li.nav-item.d-none.d-md-block
+            a.nav-link(href='javascript:void(0)')
+              form
+                .customize-input
+                  input.form-control.custom-shadow.custom-radius.border-0.bg-white(type='search', placeholder='Search', aria-label='Search')
+                  i.form-control-icon(data-feather='search')
+          // ==============================================================
+          // User profile and search
+          // ==============================================================
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='javascript:void(0)', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+              img.rounded-circle(src='/admin/assets/images/users/profile-pic.jpg', alt='user', width='40')
+              span.ml-2.d-none.d-lg-inline-block
+                span Hello,
+                span.text-dark Jason Doe
+                i.svg-icon(data-feather='chevron-down')
+            .dropdown-menu.dropdown-menu-right.user-dd.animated.flipInY
+              a.dropdown-item(href='javascript:void(0)')
+                i.svg-icon.mr-2.ml-1(data-feather='user')
+                |                                     My Profile
+              a.dropdown-item(href='javascript:void(0)')
+                i.svg-icon.mr-2.ml-1(data-feather='credit-card')
+                |                                     My Balance
+              a.dropdown-item(href='javascript:void(0)')
+                i.svg-icon.mr-2.ml-1(data-feather='mail')
+                |                                     Inbox
+              .dropdown-divider
+              a.dropdown-item(href='javascript:void(0)')
+                i.svg-icon.mr-2.ml-1(data-feather='settings')
+                |                                     Account Setting
+              .dropdown-divider
+              a.dropdown-item(href='/admin/logout')
+                i.svg-icon.mr-2.ml-1(data-feather='power')
+                |                                     Logout
+              .dropdown-divider
+              .pl-4.p-3
+                a.btn.btn-sm.btn-info(href='javascript:void(0)')
+                  | View
+                  | Profile
+          // ==============================================================
+          // User profile and search
+          // ==============================================================
+  // ==============================================================
+  // End Topbar header
+  // ==============================================================
+  // ==============================================================
+  // Left Sidebar - style you can find in sidebar.scss
+  // ==============================================================
+  aside.left-sidebar(data-sidebarbg='skin6')
+    // Sidebar scroll
+    .scroll-sidebar(data-sidebarbg='skin6')
+      // Sidebar navigation
+      nav.sidebar-nav
+        ul#sidebarnav
+          li.sidebar-item
+            a.sidebar-link.sidebar-link(href='/admin', aria-expanded='false')
+              i.feather-icon(data-feather='home')
+              span.hide-menu Dashboard
+          li.list-divider
+          li.nav-small-cap
+            span.hide-menu Applications
+          li.sidebar-item
+            a.sidebar-link.sidebar-link(href='app-chat.html', aria-expanded='false')
+              i.feather-icon(data-feather='message-square')
+              span.hide-menu Chat
+          li.list-divider
+          li.nav-small-cap
+            span.hide-menu Components
+          
+          li.sidebar-item
+            a.sidebar-link.has-arrow(href='javascript:void(0)', aria-expanded='false')
+              i.feather-icon(data-feather='grid')
+              span.hide-menu Products 
+            ul.collapse.first-level.base-level-line(aria-expanded='false')
+              li.sidebar-item
+                a.sidebar-link(href='table-basic.html')
+                  span.hide-menu
+                    | Basic Table
+              li.sidebar-item
+                a.sidebar-link(href='table-dark-basic.html')
+                  span.hide-menu
+                    | Dark Basic Table
+              li.sidebar-item
+                a.sidebar-link(href='table-sizing.html')
+                  span.hide-menu
+                    | Sizing Table
+              li.sidebar-item
+                a.sidebar-link(href='table-layout-coloured.html')
+                  span.hide-menu
+                    | Coloured
+                    | Table Layout
+              li.sidebar-item
+                a.sidebar-link(href='table-datatable-basic.html')
+                  span.hide-menu
+                    | Basic
+                    | Datatables
+                    | Layout
+          
+      // End Sidebar navigation
+    // End Sidebar scroll
+  .page-wrapper
+  block dautien
+  block cuoicung
+script(src='/admin/assets/libs/jquery/dist/jquery.min.js')
+script(src='/admin/assets/libs/popper.js/dist/umd/popper.min.js')
+script(src='/admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')
+// apps
+// apps
+script(src='/admin/dist/js/app-style-switcher.js')
+script(src='/admin/dist/js/feather.min.js')
+script(src='/admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js')
+script(src='/admin/dist/js/sidebarmenu.js')
+// Custom JavaScript
+script(src='/admin/dist/js/custom.min.js')
+// This page JavaScript
+script(src='/admin/assets/extra-libs/c3/d3.min.js')
+script(src='/admin/assets/extra-libs/c3/c3.min.js')
+script(src='/admin/assets/libs/chartist/dist/chartist.min.js')
+script(src='/admin/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js')
+script(src='/admin/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js')
+script(src='/admin/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js')
+script(src='/admin/dist/js/pages/dashboards/dashboard1.min.js')

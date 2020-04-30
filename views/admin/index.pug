@@ -1,0 +1,64 @@
+extends header.pug
+
+block dautien
+    .page-breadcrumb
+      .row
+        .col-7.align-self-center
+          h3.page-title.text-truncate.text-dark.font-weight-medium.mb-1 HEllo!
+          .d-flex.align-items-center
+            nav(aria-label='breadcrumb')
+              ol.breadcrumb.m-0.p-0
+                li.breadcrumb-item
+                  a(href='index.html') Dashboard
+        .col-5.align-self-center
+          .customize-input.float-right
+            select.custom-select.custom-select-set.form-control.bg-white.border-0.custom-shadow.custom-radius
+              option(selected='') Aug 19
+              option(value='1') July 19
+              option(value='2') Jun 19
+    .container-fluid
+      .card-group
+        .card.border-right
+          .card-body
+            .d-flex.d-lg-flex.d-md-block.align-items-center
+              div
+                .d-inline-flex.align-items-center
+                  h2.text-dark.mb-1.font-weight-medium 236
+                  span.badge.bg-primary.font-12.text-white.font-weight-medium.badge-pill.ml-2.d-lg-block.d-md-none +18.33%
+                h6.text-muted.font-weight-normal.mb-0.w-100.text-truncate New Clients
+              .ml-auto.mt-md-3.mt-lg-0
+                span.opacity-7.text-muted
+                  i(data-feather='user-plus')
+        .card.border-right
+          .card-body
+            .d-flex.d-lg-flex.d-md-block.align-items-center
+              div
+                h2.text-dark.mb-1.w-100.text-truncate.font-weight-medium
+                  sup.set-doller $
+                  | 18,306
+                h6.text-muted.font-weight-normal.mb-0.w-100.text-truncate
+                  | Earnings of Month
+              .ml-auto.mt-md-3.mt-lg-0
+                span.opacity-7.text-muted
+                  i(data-feather='dollar-sign')
+        .card.border-right
+          .card-body
+            .d-flex.d-lg-flex.d-md-block.align-items-center
+              div
+                .d-inline-flex.align-items-center
+                  h2.text-dark.mb-1.font-weight-medium 1538
+                  span.badge.bg-danger.font-12.text-white.font-weight-medium.badge-pill.ml-2.d-md-none.d-lg-block -18.33%
+                h6.text-muted.font-weight-normal.mb-0.w-100.text-truncate New Projects
+              .ml-auto.mt-md-3.mt-lg-0
+                span.opacity-7.text-muted
+                  i(data-feather='file-plus')
+        .card
+          .card-body
+            .d-flex.d-lg-flex.d-md-block.align-items-center
+              div
+                h2.text-dark.mb-1.font-weight-medium 864
+                h6.text-muted.font-weight-normal.mb-0.w-100.text-truncate Projects
+              .ml-auto.mt-md-3.mt-lg-0
+                span.opacity-7.text-muted
+                  i(data-feather='globe')
+    

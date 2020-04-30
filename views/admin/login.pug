@@ -1,0 +1,71 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  // Tell the browser to be responsive to screen width
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  // Favicon icon
+  link(rel='icon', type='image/png', sizes='16x16', href='/admin/assets/images/favicon.png')
+  title Adminmart Template - The Ultimate Multipurpose admin template
+  // Custom CSS
+  link(href='/admin/dist/css/style.min.css', rel='stylesheet')
+  // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file://
+  //if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+.main-wrapper
+  // ==============================================================
+  // Preloader - style you can find in spinners.css
+  // ==============================================================
+  .preloader
+    .lds-ripple
+      .lds-pos
+      .lds-pos
+  // ==============================================================
+  // Preloader - style you can find in spinners.css
+  // ==============================================================
+  // ==============================================================
+  // Login box.scss
+  // ==============================================================
+  .auth-wrapper.d-flex.no-block.justify-content-center.align-items-center.position-relative(style='background:url(/admin/assets/images/big/login.jpg) no-repeat center center;')
+    .auth-box.row
+      .col-lg-7.col-md-5.modal-bg-img(style='background-image: url(/admin/assets/images/big/login.jpg);')
+      .col-lg-5.col-md-7.bg-white
+        .p-3
+          .text-center
+            img(src='/admin/assets/images/big/icon.png', alt='wrapkit')
+          h2.mt-3.text-center Sign In
+          p.text-center Enter your email address and password to access admin panel.
+          form.mt-4(action='/auth', method="POST")
+            .row
+              .col-lg-12
+                .form-group
+                  label.text-dark(for='uname') Username
+                  input#uname.form-control(type='text',name='email', placeholder='enter your username')
+              .col-lg-12
+                .form-group
+                  label.text-dark(for='pwd') Password
+                  input#pwd.form-control(type='password',name='password', placeholder='enter your password')
+              .col-lg-12.text-center
+                button.btn.btn-block.btn-dark(type='submit') Sign In
+              .col-lg-12.text-center.mt-5
+                | Don&apos;t have an account? 
+                a.text-danger(href='/auth/resiger') Sign Up
+  // ==============================================================
+  // Login box.scss
+  // ==============================================================
+// ==============================================================
+// All Required js
+// ==============================================================
+script(src='/admin/assets/libs/jquery/dist/jquery.min.js ')
+// Bootstrap tether Core JavaScript
+script(src='/admin/assets/libs/popper.js/dist/umd/popper.min.js ')
+script(src='/admin/assets/libs/bootstrap/dist/js/bootstrap.min.js ')
+// ==============================================================
+// This page plugin js
+// ==============================================================
+script.
+  $(".preloader ").fadeOut();

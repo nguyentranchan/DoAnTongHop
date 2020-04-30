@@ -41,9 +41,13 @@ app.use(function(req,res,next){
 mongoose.set('useFindAndModify', false);
 
 //requide file
-
+const adminRouter = require('./routes/admin.route')
+const authRouter = require('./routes/auth.route');
+const authMiddleware = require('./middleware/auth.middleware');
 //route
 
+app.use('/admin',authMiddleware.requireAuth,adminRouter);
+app.use('/auth',authRouter);
 
 
 

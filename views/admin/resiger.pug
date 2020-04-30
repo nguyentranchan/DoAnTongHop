@@ -1,0 +1,70 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  // Tell the browser to be responsive to screen width
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  // Favicon icon
+  link(rel='icon', type='image/png', sizes='16x16', href='/admin/assets/images/favicon.png')
+  title Adminmart Template - The Ultimate Multipurpose admin template
+  // Custom CSS
+  link(href='/admin/dist/css/style.min.css', rel='stylesheet')
+  // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+  // WARNING: Respond.js doesn't work if you view the page via file://
+  //if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+.main-wrapper
+  // ==============================================================
+  // Preloader - style you can find in spinners.css
+  // ==============================================================
+  .preloader
+    .lds-ripple
+      .lds-pos
+      .lds-pos
+  // ==============================================================
+  // Preloader - style you can find in spinners.css
+  // ==============================================================
+  // ==============================================================
+  // Login box.scss
+  // ==============================================================
+  .auth-wrapper.d-flex.no-block.justify-content-center.align-items-center.position-relative(style='background:url(/admin/assets/images/big/auth-bg.jpg) no-repeat center center;')
+    .auth-box.row.text-center
+      .col-lg-7.col-md-5.modal-bg-img(style='background-image: url(/admin/assets/images/big/resiger.jpg);')
+      .col-lg-5.col-md-7.bg-white
+        .p-3
+          img(src='/admin/assets/images/big/icon.png', alt='wrapkit')
+          h2.mt-3.text-center Sign Up for Free
+          form.mt-4
+            .row
+              .col-lg-12
+                .form-group
+                  input.form-control(type='text', placeholder='your name')
+              .col-lg-12
+                .form-group
+                  input.form-control(type='email', placeholder='email address')
+              .col-lg-12
+                .form-group
+                  input.form-control(type='password', placeholder='password')
+              .col-lg-12.text-center
+                button.btn.btn-block.btn-dark(type='submit') Sign Up
+              .col-lg-12.text-center.mt-5
+                | Already have an account? 
+                a.text-danger(href='#') Sign In
+  // ==============================================================
+  // Login box.scss
+  // ==============================================================
+// ==============================================================
+// All Required js
+// ==============================================================
+script(src='/admin/assets/libs/jquery/dist/jquery.min.js ')
+// Bootstrap tether Core JavaScript
+script(src='/admin/assets/libs/popper.js/dist/umd/popper.min.js ')
+script(src='/admin/assets/libs/bootstrap/dist/js/bootstrap.min.js ')
+// ==============================================================
+// This page plugin js
+// ==============================================================
+script.
+  $(".preloader ").fadeOut();
