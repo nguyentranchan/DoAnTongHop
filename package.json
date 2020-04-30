@@ -1,0 +1,34 @@
+{
+  "name": "doantonghop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 8080"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "lowdb": "^1.0.0",
+    "md": "^0.6.0",
+    "md5": "^2.2.1",
+    "method-override": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.7.8",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "shortid": "^2.2.15"
+  }
+}
