@@ -36,18 +36,21 @@ head
       .col-lg-5.col-md-7.bg-white
         .p-3
           img(src='/admin/assets/images/big/icon.png', alt='wrapkit')
+          if errors
+            each error in errors
+              .alert.alert-danger= error
           h2.mt-3.text-center Sign Up for Free
           form.mt-4
             .row
               .col-lg-12
                 .form-group
-                  input.form-control(type='text', placeholder='your name')
+                  input.form-control(type='text',name = 'name', placeholder='your name')
               .col-lg-12
                 .form-group
-                  input.form-control(type='email', placeholder='email address')
+                  input.form-control(type='email',name = 'email', placeholder='email address')
               .col-lg-12
                 .form-group
-                  input.form-control(type='password', placeholder='password')
+                  input.form-control(type='password',name = 'password' , placeholder='password')
               .col-lg-12.text-center
                 button.btn.btn-block.btn-dark(type='submit') Sign Up
               .col-lg-12.text-center.mt-5

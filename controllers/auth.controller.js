@@ -1,20 +1,14 @@
 var User = require('../models/userAdmin.model')
 var md5 = require('md5')
 
-module.exports.login = function(req,res){
+module.exports.login = function (req,res){
     if(req.signedCookies.userEmail){
         res.redirect('/admin');
     }else
         res.render('admin/login');
 }
-module.exports.resiger = function(req,res){
-    if(req.signedCookies.userEmail){
-        res.redirect('/admin');
-    }else
-        res.render('admin/resiger');
-}
 
-module.exports.postlogin = async function(req,res,next){
+module.exports.postlogin = async function (req, res, next){
 	const email = req.body.email;
 	const password = req.body.password;
 	var haspassword = md5(password);
@@ -32,8 +26,19 @@ module.exports.postlogin = async function(req,res,next){
             });
             return;
         }else{
-            res.cookie('userEmail',user.email,{signed:true});
+            res.cookie('userEmail',user.email,{signed: true});
             res.redirect('/admin')
         }       
     }
+    next();
 }
+
+module.exports.resiger = function(req, res) {
+    if(req.signedCookies.userEmail){
+        res.redirect('/admin');
+    }else
+        res.render('admin/resiger');
+}
+
+
+
