@@ -20,14 +20,14 @@ module.exports.postlogin = async function(req,res,next){
 	var haspassword = md5(password);
     var user = await User.findOne({email: email});
 	if(!user){
-		res.render('auth/login',{
+		res.render('admin/login',{
 			errors : ['User does not exit.']
 		});
 		return;
 	}else{
         if (user.password !== haspassword) {
             // statement
-            res.render('auth/login',{
+            res.render('admin/login',{
                 errors : ['Password not true.']
             });
             return;

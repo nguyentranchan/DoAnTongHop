@@ -39,6 +39,9 @@ head
             img(src='/admin/assets/images/big/icon.png', alt='wrapkit')
           h2.mt-3.text-center Sign In
           p.text-center Enter your email address and password to access admin panel.
+          if errors
+            each error in errors
+              .alert.alert-danger= error
           form.mt-4(action='/auth', method="POST")
             .row
               .col-lg-12

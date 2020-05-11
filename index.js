@@ -12,16 +12,15 @@ var MongoStore = require('connect-mongo')(session);
 var app = express();
 var port = 3000;
 
+app.listen(port,function(){
+	console.log('Server listening on port 3000');
+});
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }, err => {
    if (err) throw err;
    console.log('Connect Database successfullyy!!');
- });
- app.listen(port,function(){
-	console.log('Server listening on port 3000');
-});
+ })
+
 //cau hinh 
-app.set('view engine','pug');
-app.set('views','./views');
 app.set('view engine','pug');
 app.set('views','./views');
 app.use(bodyParser.json()) // for parsing application/json
