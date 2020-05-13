@@ -8,7 +8,7 @@ head
   meta(name='author', content='')
   // Favicon icon
   link(rel='icon', type='image/png', sizes='16x16', href='assets/images/favicon.png')
-  title Adminmart Template - The Ultimate Multipurpose admin template
+  title Admin
   // Custom CSS
   link(href='/admin/assets/extra-libs/c3/c3.min.css', rel='stylesheet')
   link(href='/admin/assets/libs/chartist/dist/chartist.min.css', rel='stylesheet')
@@ -124,7 +124,7 @@ head
               img.rounded-circle(src='/admin/assets/images/users/profile-pic.jpg', alt='user', width='40')
               span.ml-2.d-none.d-lg-inline-block
                 span Hello,
-                span.text-dark Jason Doe
+                span.text-dark #{username}
                 i.svg-icon(data-feather='chevron-down')
             .dropdown-menu.dropdown-menu-right.user-dd.animated.flipInY
               a.dropdown-item(href='javascript:void(0)')
@@ -211,8 +211,10 @@ head
       // End Sidebar navigation
     // End Sidebar scroll
   .page-wrapper
-  block dautien
-  block cuoicung
+    block dautien
+
+
+  
 script(src='/admin/assets/libs/jquery/dist/jquery.min.js')
 script(src='/admin/assets/libs/popper.js/dist/umd/popper.min.js')
 script(src='/admin/assets/libs/bootstrap/dist/js/bootstrap.min.js')

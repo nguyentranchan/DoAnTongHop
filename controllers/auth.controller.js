@@ -40,5 +40,11 @@ module.exports.resiger = function(req, res) {
         res.render('admin/resiger');
 }
 
+module.exports.postRes = async function( req, res) {
+    req.body.password = md5(req.body.password);
+    const user = await User.insertMany(req.body);
+    res.redirect('/auth');
+}
+
 
 

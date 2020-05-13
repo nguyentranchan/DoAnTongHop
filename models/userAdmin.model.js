@@ -4,11 +4,25 @@ var userAdminSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
     password: String,
-    avatar: String,
-    email: String,
-    phone:String,
-    address: String,
-    status: Boolean,
+    avatar: {
+        type: String,
+        default: ""
+    },
+    email:{
+        type:String
+    },
+    phone:{
+        type:String,
+        default: ""
+    },
+    address: {
+        type:String,
+        default: ""
+    },
+    status: {
+        type:String,
+        default: "Pending"
+    },
     create_time : {
         type : Date, default: Date.now},
     update_time : {

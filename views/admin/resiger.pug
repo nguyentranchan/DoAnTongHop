@@ -37,10 +37,9 @@ head
         .p-3
           img(src='/admin/assets/images/big/icon.png', alt='wrapkit')
           if errors
-            each error in errors
-              .alert.alert-danger= error
+              .alert.alert-danger= errors
           h2.mt-3.text-center Sign Up for Free
-          form.mt-4
+          form.mt-4(action='/auth/resiger', method="POST")
             .row
               .col-lg-12
                 .form-group
@@ -55,7 +54,7 @@ head
                 button.btn.btn-block.btn-dark(type='submit') Sign Up
               .col-lg-12.text-center.mt-5
                 | Already have an account? 
-                a.text-danger(href='#') Sign In
+                a.text-danger(href='/auth') Sign In
   // ==============================================================
   // Login box.scss
   // ==============================================================
