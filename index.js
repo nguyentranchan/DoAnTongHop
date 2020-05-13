@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var path = require('path')
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
+var validator = require('validator');
 //
 //connet mongodb 
 var app = express();
